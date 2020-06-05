@@ -14,7 +14,6 @@ $(document).ready(function () {
     game2DArray = Array(gameSize)
       .fill(null)
       .map(() => Array(gameSize).fill(0));
-    console.log(game2DArray);
   }
 
   function update2DArray(id, role) {
@@ -24,7 +23,6 @@ $(document).ready(function () {
 
   function isWinGame(id) {
     var [row, col] = id.split('_');
-    console.log(game2DArray);
     row = parseInt(row, 10);
     col = parseInt(col, 10);
     var isRowComplete = true,
@@ -160,8 +158,6 @@ $(document).ready(function () {
   // All event handler
   function bindGamePanel() {
     $('#game .btn').click(function () {
-      console.log($(this));
-      console.log($(this)[0].id);
       var id = $(this)[0].id;
       if ($(this).hasClass('disable')) {
         alert('Already selected');
