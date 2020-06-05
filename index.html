@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe game</title>
+  <link rel='stylesheet prefetch' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Settings</h3>
+      </div>
+      <ul class="list-unstyled components">
+        <p>Actions</p>
+        <li>
+          <a href="#" id="undo">Undo</a>
+        </li>
+        <li>
+          <a href="#" id="restart">Restart</a>
+        </li>
+        <li>
+          <a href="#" id="reset">Reset</a>
+        </li>
+      </ul>
+      <ul class="list-unstyled components">
+        <p>Game Size</p>
+        <li>
+          <a href="#" id="size_3" class="size-setting">Size 3</a>
+        </li>
+        <li>
+          <a href="#" id="size_5" class="size-setting">Size 5</a>
+        </li>
+        <li>
+          <a href="#" id="size_7" class="size-setting">Size 7</a>
+        </li>
+      </ul>
+      <ul class="list-unstyled components">
+        <p>Game Player</p>
+        <li>
+          <a href="#" id="add_player">Add Player</a>
+        </li>
+        <li>
+          <a href="#" id="remove_player">Remove Player</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="tic-tac-toe" class="size_3">
+      <h1>Tic Tac Toe</h1>
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+      <div class="row" id="game"></div>
+      <div class="clr">&nbsp;</div>
+      <div>
+        <a href="#" id="sidebarCollapse" class="btn btn-info">Toggle Settings</a>
+      </div>
+    </div>
+  </div>
+  <script src='https://code.jquery.com/jquery-1.7.2.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
