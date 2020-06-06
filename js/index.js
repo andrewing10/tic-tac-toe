@@ -52,7 +52,7 @@ $(document).ready(function () {
   }
 
   function createMsgCardDOM() {
-    var msgCard = $('#tic-tac-toe .card-body');
+    var msgCard = $('#tic_tac_toe .card-body');
     msgCard.empty();
     activeRolesList.forEach(function (role) {
       msgCard.append(`<div>Role ${role} Won: <span id="${role}_win">0</span> times</div>`);
@@ -60,7 +60,7 @@ $(document).ready(function () {
   }
 
   function createGameBtnsDOM() {
-    var gamePanel = $('#tic-tac-toe #game');
+    var gamePanel = $('#tic_tac_toe #game');
     gamePanel.empty();
     for (var i = 0; i < gameSize; i++) {
       var rowDataDOM = '';
@@ -132,7 +132,7 @@ $(document).ready(function () {
 
   function updateGameSize(size) {
     gameSize = parseInt(size.split('_')[1], 10);
-    $('#tic-tac-toe').removeClass().addClass(size);
+    $('#tic_tac_toe').removeClass().addClass(size);
     init2DArray();
     createGameBtnsDOM();
     // Need to rebind the event listioner
@@ -185,7 +185,7 @@ $(document).ready(function () {
     updateGameSize($(this)[0].id);
   });
 
-  $('#sidebarCollapse').on('click', function () {
+  $('#sidebar_collapse').on('click', function () {
     $('#sidebar').toggleClass('active');
   });
 });

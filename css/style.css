@@ -3,12 +3,12 @@
   width: 100%;
   align-items: stretch;
 }
-#tic-tac-toe .disable {
+#tic_tac_toe .disable {
   text-transform: uppercase;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#tic-tac-toe #game .btn {
+#tic_tac_toe #game .btn {
   padding: 0;
   margin-bottom: 20px;
   width: 60px;
@@ -18,44 +18,44 @@
   color: #ccc;
   border-bottom: 1px solid #e6e6e6;
 }
-#tic-tac-toe .game-row {
+#tic_tac_toe .game-row {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
-#tic-tac-toe #game .btn.disable {
+#tic_tac_toe #game .btn.disable {
   color: #fff;
   pointer-events: none;
 }
-#tic-tac-toe .card {
+#tic_tac_toe .card {
   width: 100%;
   margin-bottom: 16px;
 }
-#tic-tac-toe h1 {
+#tic_tac_toe h1 {
   text-align: center;
   font-size: 28px;
 }
-#tic-tac-toe .btn::-moz-selection {
+#tic_tac_toe .btn::-moz-selection {
   background: none;
   color: #000;
 }
-#tic-tac-toe .btn::-webkit-selection {
+#tic_tac_toe .btn::-webkit-selection {
   background: none;
   color: #000;
 }
-#tic-tac-toe.size_3 {
+#tic_tac_toe.size_3 {
   width: 260px;
   margin: 16px auto 0;
 }
-#tic-tac-toe.size_5 {
+#tic_tac_toe.size_5 {
   width: 420px;
   margin: 16px auto 0;
 }
-#tic-tac-toe.size_7 {
+#tic_tac_toe.size_7 {
   width: 580px;
   margin: 16px auto 0;
 }
-#sidebarCollapse {
+#sidebar_collapse {
   width: 100%;
 }
 #sidebar {
