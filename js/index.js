@@ -1,15 +1,17 @@
 $(document).ready(function () {
   const ROLE_COLOR_CLASS = ['btn-primary', 'btn-info', 'btn-success', 'btn-danger', 'btn-warning'];
-  const GAMES_ROWS = [3, 5, 7];
-  var gameActionHistory = [];
-  var pendingRoleList = ['S', 'D', 'W'];
-  var activeRolesList = ['O', 'X'];
-  var activeRoleIndex = 0;
-  var gameSize = 3;
-  var game2DArray;
+  var gameActionHistory, pendingRoleList, activeRolesList, activeRoleIndex, gameSize, game2DArray;
+
+  function initCtrValues() {
+    gameActionHistory = [];
+    pendingRoleList = ['S', 'D', 'W'];
+    activeRolesList = ['O', 'X'];
+    activeRoleIndex = 0;
+    gameSize = 3;
+  }
 
   function init2DArray() {
-	// Make sure gameSize is a number
+    // Make sure gameSize is a number
     gameSize = isNaN(gameSize) ? parseInt(gameSize, 10) : gameSize;
     game2DArray = Array(gameSize)
       .fill(null)
@@ -117,6 +119,7 @@ $(document).ready(function () {
   }
 
   function addPlayer() {
+    if (pendingRoleList.length === 0) return;
     restartGame();
     var newPlayer = pendingRoleList.shift();
     activeRolesList.push(newPlayer);
@@ -124,6 +127,7 @@ $(document).ready(function () {
   }
 
   function removePlayer() {
+    if (activeRolesList.length <= 2) return;
     restartGame();
     var quitPlayer = activeRolesList.pop();
     pendingRoleList.unshift(quitPlayer);
@@ -133,6 +137,8 @@ $(document).ready(function () {
   function updateGameSize(size) {
     gameSize = parseInt(size.split('_')[1], 10);
     $('#tic_tac_toe').removeClass().addClass(size);
+    activeRoleIndex = 0;
+    gameActionHistory = [];
     init2DArray();
     createGameBtnsDOM();
     // Need to rebind the event listioner
@@ -140,8 +146,8 @@ $(document).ready(function () {
   }
 
   function initGame() {
-    activeRoleIndex = 0;
-    gameActionHistory = [];
+    $('#tic_tac_toe').removeClass().addClass('size_3');
+    initCtrValues();
     init2DArray();
     createMsgCardDOM();
     createGameBtnsDOM();
