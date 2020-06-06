@@ -94,11 +94,6 @@ $(document).ready(function () {
         var roleTxtDom = $(`#${role}_win`);
         roleTxtDom.text(parseInt(roleTxtDom.text(), 10) + 1);
       }, 0);
-    } else if (gameActionHistory.length === gameSize * gameSize) {
-      setTimeout(function () {
-        alert('Its a tie. It will restart.');
-        restartGame();
-      }, 0);
     } else {
       activeRoleIndex = ++activeRoleIndex % activeRolesList.length;
     }

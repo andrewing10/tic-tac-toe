@@ -1,9 +1,14 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
 #tic-tac-toe .disable {
   text-transform: uppercase;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#game .btn {
+#tic-tac-toe #game .btn {
   padding: 0;
   margin-bottom: 20px;
   width: 60px;
@@ -13,36 +18,18 @@
   color: #ccc;
   border-bottom: 1px solid #e6e6e6;
 }
-.game-row {
+#tic-tac-toe .game-row {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
 #tic-tac-toe #game .btn.disable {
   color: #fff;
+  pointer-events: none;
 }
-#tic-tac-toe #game {
-  float: left;
-  padding: 0;
-  clear: both;
-}
-.card {
+#tic-tac-toe .card {
   width: 100%;
   margin-bottom: 16px;
-}
-
-.input-prepend span.pre_text {
-  width: 55px;
-}
-.input-prepend .span1 {
-  width: 93px;
-}
-.input-prepend {
-  margin-bottom: 10px;
-}
-.clr {
-  clear: both;
-  height: 0;
 }
 #tic-tac-toe h1 {
   text-align: center;
@@ -68,32 +55,21 @@
   width: 580px;
   margin: 16px auto 0;
 }
-.input-append .win_times {
-  background: #fff;
-  width: 101px;
-}
-.input-append .win_text {
-  width: 52px;
-}
 #sidebarCollapse {
   width: 100%;
-}
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
 }
 #sidebar {
   min-width: 250px;
   max-width: 250px;
   min-height: 100vh;
+  margin-left: -250px;
   background: #7386d5;
   color: #fff;
   transition: all 0.3s;
 }
 
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: 0;
 }
 
 #sidebar .sidebar-header {
@@ -120,15 +96,4 @@
 #sidebar ul li a:hover {
   color: #7386d5;
   background: #fff;
-}
-
-#sidebar ul li.active > a,
-a[aria-expanded='true'] {
-  color: #fff;
-  background: #6d7fcc;
-}
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #6d7fcc;
 }
